@@ -1,5 +1,7 @@
 # Nvim : jump to mark
 
+![](example.gif)
+
 ## Idea
 
 For a long time... I wanted a nvim workflow with mulitple windows and tab opened, to form a mental map about the code, using visual assistence (tabs, and windows).
