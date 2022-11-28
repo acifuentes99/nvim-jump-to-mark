@@ -3,6 +3,9 @@ local path = require "fzf-lua.path"
 local utils = require "fzf-lua.utils"
 local config = require "fzf-lua.config"
 local make_entry = require "fzf-lua.make_entry"
+local marks = require "marks"
+
+
 
 local M = {}
 
@@ -234,7 +237,7 @@ local function gen_buffer_entry(opts, buf, hl_curbuf)
   return item_str
 end
 
-M.tabs = function(opts)
+M.marks_in_tabs = function(opts)
   local locations = vim.fn.getqflist()
   if vim.tbl_isempty(locations) then
     utils.info("Quickfix list is empty.")
@@ -242,6 +245,7 @@ M.tabs = function(opts)
   end
 
   opts = config.normalize_opts(opts, config.globals.tabs)
+  opts.prompt = "Marks> "
   if not opts then return end
 
   opts.fn_pre_fzf = UPDATE_STATE
@@ -306,5 +310,6 @@ M.tabs = function(opts)
   core.fzf_exec(contents, opts)
 end
 
-M.tabs()
+marks.mark_state:all_to_list('quickfixlist')
+M.marks_in_tabs()
 return M

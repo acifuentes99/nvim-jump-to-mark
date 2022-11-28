@@ -17,14 +17,14 @@ Due to workflow, this code requires the following plugins installed (and their r
 ## Instructions
 
 * Grab some local Marks on opened files, and create tabs with other files or marks
-* Run command '`:MarksQFListAll`', to generate a list of Quickfix for local marks (using Marks.nvim plugin)
-* Then, run the following code of repo (`:luafile ~/Repositories/nvim-jump-to-mark/nvim-jump-to-mark.lua`), to open fzf-lua window, and see all of your local marks by file, with previewer included!
+* Then, run the following code of repo (`:luafile ~/Repositories/nvim-jump-to-mark/nvim-jump-to-mark.lua`), to open fzf-lua window, and see all of your local marks by file, with previewer included!. (Recomended, map command to key combination)
 * Press Enter, on result, to jump to mark in the first corresponding window
 
 ## TODO
 
 For now... this is one night/morning code, for making my life easier the following week. So, there is a lot of imrpovement to do. Some of them:
-* Include the creation of Quickfix list, without using `:MarksQFListAll`
-* Better appearance of resutls (its for now... very ugly, copy pasted... but functional)
-* Refactor, and clean code (there its a lot unused... because its a copy paste of fzf-lua tabs code)
-* Change the "Tabs" title (yes.. I Copied tabs of fzf-lua, then... modifying results list)
+* [X] Include the creation of Quickfix list, without using `:MarksQFListAll`
+* [ ] Better appearance of resutls (its for now... very ugly, copy pasted... but functional)
+* [ ] Refactor, and clean code (there its a lot unused... because its a copy paste of fzf-lua tabs code)
+* [ ] Use native function from base requirements, instead of copied and modified code (separate code logics)
+* [X] Change the "Tabs" title (yes.. I Copied tabs of fzf-lua, then... modifying results list)
